@@ -10,6 +10,17 @@ package ec.edu.espe.SanamedAccountSystem.model;
  * @author Esteban Chablay EMCL. Java ESPE-DCCO
  */
 public class FinalConsumer {
+    
+    private float totalValue;
+    private ShoppingList shoppingList;
+
+    public FinalConsumer() {
+    }
+
+    public FinalConsumer(float totalValue, ShoppingList shoppingList) {
+        this.totalValue = totalValue;
+        this.shoppingList = shoppingList;
+    }
 
     /**
      * @return the totalValue
@@ -37,9 +48,8 @@ public class FinalConsumer {
      */
     public void setShoppingList(ShoppingList shoppingList) {
         this.shoppingList = shoppingList;
-    }
-    private float totalValue;
-    private ShoppingList shoppingList;
+    }    
+    
     
     public void printFinalConsumer(){
         

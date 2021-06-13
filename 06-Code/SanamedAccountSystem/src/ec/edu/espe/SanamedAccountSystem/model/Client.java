@@ -84,7 +84,20 @@ public class Client {
     private String name;
     private String adress;
     private int phoneNumber;
-    private CreditCard creditCard;    
+    private CreditCard creditCard; 
+
+    public Client() {
+    }
+
+    public Client(int id, String name, String adress, int phoneNumber, CreditCard creditCard) {
+        this.id = id;
+        this.name = name;
+        this.adress = adress;
+        this.phoneNumber = phoneNumber;
+        this.creditCard = creditCard;
+    }
+    
+    
     
     public void payWithCard(CreditCard card){
         

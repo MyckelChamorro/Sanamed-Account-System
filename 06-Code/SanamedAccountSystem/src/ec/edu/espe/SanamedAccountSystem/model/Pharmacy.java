@@ -10,7 +10,18 @@ package ec.edu.espe.SanamedAccountSystem.model;
  * @author Esteban Chablay EMCL. Java ESPE-DCCO
  */
 public class Pharmacy {
+    
+    private String name;
+    private String branchOffice;
 
+    public Pharmacy() {
+    }
+
+    public Pharmacy(String name, String branchOffice) {
+        this.name = name;
+        this.branchOffice = branchOffice;
+    }
+    
     /**
      * @return the name
      */
@@ -38,6 +49,7 @@ public class Pharmacy {
     public void setBranchOffice(String branchOffice) {
         this.branchOffice = branchOffice;
     }
-    private String name;
-    private String branchOffice;
+    
+    
+    
 }

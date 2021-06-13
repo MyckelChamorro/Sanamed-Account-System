@@ -10,6 +10,23 @@ package ec.edu.espe.SanamedAccountSystem.model;
  * @author Esteban
  */
 public class Product {
+    
+    private Medicins medicine;
+   private Cosmetic cosmetic;
+   private Others other;
+   private int quantity;
+   private float individualValue;
+
+    public Product() {
+    }
+
+    public Product(Medicins medicine, Cosmetic cosmetic, Others other, int quantity, float individualValue) {
+        this.medicine = medicine;
+        this.cosmetic = cosmetic;
+        this.other = other;
+        this.quantity = quantity;
+        this.individualValue = individualValue;
+    }
 
     /**
      * @return the medicine
@@ -80,11 +97,8 @@ public class Product {
     public void setIndividualValue(float individualValue) {
         this.individualValue = individualValue;
     }
-   private Medicins medicine;
-   private Cosmetic cosmetic;
-   private Others other;
-   private int quantity;
-   private float individualValue;
+   
+   
    
    public Medicins addMedicine(Medicins medicine){
        return new Medicins();
