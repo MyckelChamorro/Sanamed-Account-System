@@ -12,6 +12,34 @@ import java.util.ArrayList;
  * @author Esteban
  */
 public class ShoppingList {
+
+    /**
+     * @return the products
+     */
+    public ArrayList<Product> getProducts() {
+        return products;
+    }
+
+    /**
+     * @param products the products to set
+     */
+    public void setProducts(ArrayList<Product> products) {
+        this.products = products;
+    }
+
+    /**
+     * @return the totalValue
+     */
+    public float getTotalValue() {
+        return totalValue;
+    }
+
+    /**
+     * @param totalValue the totalValue to set
+     */
+    public void setTotalValue(float totalValue) {
+        this.totalValue = totalValue;
+    }
     private ArrayList<Product> products = new ArrayList<Product>();
     private float totalValue;
     

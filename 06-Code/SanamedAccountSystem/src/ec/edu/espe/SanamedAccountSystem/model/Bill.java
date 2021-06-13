@@ -16,6 +16,38 @@ public class Bill {
     private Pharmacy pharmacy;
     private int numberOfbill;
     private Date date;
+
+    public Client getClient() {
+        return client;
+    }
+
+    public void setClient(Client client) {
+        this.client = client;
+    }
+
+    public Pharmacy getPharmacy() {
+        return pharmacy;
+    }
+
+    public void setPharmacy(Pharmacy pharmacy) {
+        this.pharmacy = pharmacy;
+    }
+
+    public int getNumberOfbill() {
+        return numberOfbill;
+    }
+
+    public void setNumberOfbill(int numberOfbill) {
+        this.numberOfbill = numberOfbill;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
     
     public void printBil(ShoppingList list){
         

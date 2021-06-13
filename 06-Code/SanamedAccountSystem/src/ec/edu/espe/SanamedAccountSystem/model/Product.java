@@ -10,6 +10,76 @@ package ec.edu.espe.SanamedAccountSystem.model;
  * @author Esteban
  */
 public class Product {
+
+    /**
+     * @return the medicine
+     */
+    public Medicins getMedicine() {
+        return medicine;
+    }
+
+    /**
+     * @param medicine the medicine to set
+     */
+    public void setMedicine(Medicins medicine) {
+        this.medicine = medicine;
+    }
+
+    /**
+     * @return the cosmetic
+     */
+    public Cosmetic getCosmetic() {
+        return cosmetic;
+    }
+
+    /**
+     * @param cosmetic the cosmetic to set
+     */
+    public void setCosmetic(Cosmetic cosmetic) {
+        this.cosmetic = cosmetic;
+    }
+
+    /**
+     * @return the other
+     */
+    public Others getOther() {
+        return other;
+    }
+
+    /**
+     * @param other the other to set
+     */
+    public void setOther(Others other) {
+        this.other = other;
+    }
+
+    /**
+     * @return the quantity
+     */
+    public int getQuantity() {
+        return quantity;
+    }
+
+    /**
+     * @param quantity the quantity to set
+     */
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    /**
+     * @return the individualValue
+     */
+    public float getIndividualValue() {
+        return individualValue;
+    }
+
+    /**
+     * @param individualValue the individualValue to set
+     */
+    public void setIndividualValue(float individualValue) {
+        this.individualValue = individualValue;
+    }
    private Medicins medicine;
    private Cosmetic cosmetic;
    private Others other;
