@@ -10,6 +10,19 @@ package ec.edu.espe.SanamedAccountSystem.model;
  * @author Esteban Chablay EMCL. Java ESPE-DCCO
  */
 public class Cosmetic {
+    
+    private String typeOfMedicine;
+    private int stock;
+    private float price;
+
+    public Cosmetic() {
+    }
+
+    public Cosmetic(String typeOfMedicine, int stock, float price) {
+        this.typeOfMedicine = typeOfMedicine;
+        this.stock = stock;
+        this.price = price;
+    }
 
     /**
      * @return the typeOfMedicine
@@ -51,10 +64,8 @@ public class Cosmetic {
      */
     public void setPrice(float price) {
         this.price = price;
-    }
-    private String typeOfMedicine;
-    private int stock;
-    private float price;
+    }  
+    
     
     public void calculateStock(){
         

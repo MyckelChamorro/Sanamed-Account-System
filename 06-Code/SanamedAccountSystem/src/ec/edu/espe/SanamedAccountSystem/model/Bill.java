@@ -17,6 +17,18 @@ public class Bill {
     private int numberOfbill;
     private Date date;
 
+    public Bill() {
+    }
+
+    public Bill(Client client, Pharmacy pharmacy, int numberOfbill, Date date) {
+        this.client = client;
+        this.pharmacy = pharmacy;
+        this.numberOfbill = numberOfbill;
+        this.date = date;
+    }
+    
+    
+
     public Client getClient() {
         return client;
     }

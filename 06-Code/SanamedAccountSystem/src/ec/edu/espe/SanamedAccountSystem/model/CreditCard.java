@@ -10,6 +10,15 @@ package ec.edu.espe.SanamedAccountSystem.model;
  * @author Esteban Chablay EMCL. Java ESPE-DCCO
  */
 public class CreditCard {
+    
+    private int numberOfCard;
+
+    public CreditCard() {
+    }
+
+    public CreditCard(int numberOfCard) {
+        this.numberOfCard = numberOfCard;
+    }
 
     /**
      * @return the numberOfCard
@@ -24,5 +33,6 @@ public class CreditCard {
     public void setNumberOfCard(int numberOfCard) {
         this.numberOfCard = numberOfCard;
     }
-    private int numberOfCard;
+      
+    
 }
