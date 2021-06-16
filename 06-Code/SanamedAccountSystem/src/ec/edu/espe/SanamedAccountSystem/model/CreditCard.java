@@ -13,7 +13,14 @@ public class CreditCard {
     
     private int numberOfCard;
 
+    @Override
+    public String toString() {
+        return "CreditCard{" + "numberOfCard=" + numberOfCard + '}';
+    }
+    
+
     public CreditCard() {
+        numberOfCard=0000;
     }
 
     public CreditCard(int numberOfCard) {
