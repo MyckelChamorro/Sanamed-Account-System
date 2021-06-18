@@ -11,7 +11,7 @@ package ec.edu.espe.SanamedAccountSystem.model;
  */
 public class CreditCard {
     
-    private int numberOfCard;
+    private long numberOfCard;
 
     @Override
     public String toString() {
@@ -23,14 +23,14 @@ public class CreditCard {
         numberOfCard=0000;
     }
 
-    public CreditCard(int numberOfCard) {
+    public CreditCard(long numberOfCard) {
         this.numberOfCard = numberOfCard;
     }
 
     /**
      * @return the numberOfCard
      */
-    public int getNumberOfCard() {
+    public long getNumberOfCard() {
         return numberOfCard;
     }
 
