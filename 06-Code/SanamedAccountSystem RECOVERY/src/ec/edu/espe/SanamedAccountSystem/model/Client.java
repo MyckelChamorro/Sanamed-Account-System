@@ -11,6 +11,12 @@ package ec.edu.espe.SanamedAccountSystem.model;
  */
 public class Client {
 
+    @Override
+    public String toString() {
+        return "Client{" + "id=" + id + ", name=" + name + ", adress=" + adress + ", phoneNumber=" + phoneNumber + ", creditCard=" + creditCard + '}';
+    }
+    
+
     /**
      * @return the id
      */
@@ -80,7 +86,9 @@ public class Client {
     public void setCreditCard(CreditCard creditCard) {
         this.creditCard = creditCard;
     }
-    private int id;
+    private int id; // cambiar a arreglo para poder validar 
+    // int id[10]
+    //refactorar otra vez 
     private String name;
     private String adress;
     private int phoneNumber;
