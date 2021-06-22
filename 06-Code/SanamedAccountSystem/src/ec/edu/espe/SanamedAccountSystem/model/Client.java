@@ -86,7 +86,8 @@ public class Client {
     public void setCreditCard(CreditCard creditCard) {
         this.creditCard = creditCard;
     }
-    private int id;
+    private int id; // cambiar a arreglo para poder validar 
+    
     private String name;
     private String adress;
     private int phoneNumber;

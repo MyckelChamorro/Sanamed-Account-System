@@ -23,7 +23,7 @@ import java.util.logging.Logger;
 public class SanamedAplication {
 
     public static void main(String[] args) {
-        int id;
+        int id; // cambiar a arreglo de [10] para poder validar la cedula 
         String name;
         String adress;
         long card;
@@ -55,6 +55,7 @@ public class SanamedAplication {
         System.out.println("Text Files by Myckel Chamorro");
         System.out.println("Insert Id-->");
         id = keyboardinput.nextInt();
+        
         System.out.println("Insert name-->");
         name = keyboardinput.next();
         System.out.println("Insert adress-->");

@@ -11,7 +11,7 @@ package ec.edu.espe.SanamedAccountSystem.model;
  */
 public class Medicins {
     
-    private String typeOfMedicine;
+    private String typeOfMedicine;// crear una clase de esto 
     private int stock;
     private float price;
 
