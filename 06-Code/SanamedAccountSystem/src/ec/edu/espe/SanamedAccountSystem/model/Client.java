@@ -87,7 +87,8 @@ public class Client {
         this.creditCard = creditCard;
     }
     private int id; // cambiar a arreglo para poder validar 
-    
+    // int id[10]
+    //refactorar otra vez 
     private String name;
     private String adress;
     private int phoneNumber;
