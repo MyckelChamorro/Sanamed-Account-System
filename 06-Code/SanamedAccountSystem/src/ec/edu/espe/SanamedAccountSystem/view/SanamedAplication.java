@@ -69,21 +69,31 @@ public class SanamedAplication {
         //INICIO DE SESION
         String userLog = null;
         Scanner scan = new Scanner(System.in);
-//        System.out.println("Ingrese su usuario: ");
-//        userLog= scan.nextLine();
-        //userLog = JOptionPane.showInputDialog("Ingrese su usuario: ");
-        userLog = JOptionPane.showInputDialog(null, "Ingrese su usuario", "Ingreso de Usuario", JOptionPane.QUESTION_MESSAGE);
+        System.out.println("-----------------------| INGRESO DE USUARIO |----------------------");
+        System.out.println("Ingrese su usuario: ");
+        userLog= scan.nextLine();
+        
         pharma.logginCashier(userLog);
 
     }
 
     public static void menu(int option, String op) {
         do {
-            op = JOptionPane.showInputDialog("SELECCIONE UNA OPCION. \n"
-                    + "1. Ingreso de ventas\n"
-                    + "2. Busqueda de productos\n"
-                    + "3. Imprimir\n"
-                    + "4. Salir");
+//            op = JOptionPane.showInputDialog("SELECCIONE UNA OPCION. \n"
+//                    + "1. Ingreso de ventas\n"
+//                    + "2. Busqueda de productos\n"
+//                    + "3. Imprimir\n"
+//                    + "4. Salir");
+            Scanner scan = new Scanner(System.in);
+            System.out.println("------------------------| MENU PRINCIPAL |----------------------");
+            System.out.println("1. Ingreso de ventas.");
+            System.out.println("2. Busqueda de productos.");
+            System.out.println("3. Imprimir.");
+            System.out.println("4. Salir");
+            System.out.println("--------------------------------------------------------------");
+            System.out.println("Seleccione una opcion: ");
+            op = scan.nextLine();
+            System.out.println("--------------------------------------------------------------");
             option = Integer.parseInt(op);
             switch (option) {
 
@@ -97,7 +107,7 @@ public class SanamedAplication {
                     File document;
                     FileWriter write;
                     PrintWriter line;
-                    JOptionPane.showMessageDialog(null, "Selecciono ingreso de ventas");
+                    System.out.println("Selecciono ingreso de ventas");
                     Scanner keyboardinput = new Scanner(System.in);
 
                     do {
@@ -192,16 +202,16 @@ public class SanamedAplication {
 
                     break;
                 case 2:
-                    JOptionPane.showMessageDialog(null, "Selecciono busqueda de productos");
+                    System.out.println("Selecciono busqueda de productos.");
                     break;
                 case 3:
-                    JOptionPane.showMessageDialog(null, "Selecciono impresion");
+                    System.out.println("Selecciono impresion.");
                     break;
                 case 4:
-                    JOptionPane.showMessageDialog(null, "Gracias por usar el programa ;D");
+                    System.out.println("Gracias por ocupar el programa.");
                     break;
                 default:
-                    JOptionPane.showMessageDialog(null, "Eliga una de las opciones", "Error", JOptionPane.WARNING_MESSAGE);
+                    System.out.println("Eliga una de las opciones.");
             }
         } while (option != 4);
     }
