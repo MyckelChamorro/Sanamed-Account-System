@@ -26,138 +26,46 @@ import org.json.simple.JSONArray;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-
-
 /**
  *
  * @author Myckel Chamorro EMCL.java ESPE-DCCO
  */
 public class SanamedAplication {
 
-
     public static void main(String[] args) throws ParseException, IOException {
-        int id;
-        String name;
-        String adress;
-        long card;
-        int phoneNumber;
-        File document;
-        FileWriter write;
-        PrintWriter line;
-        Pharmacy  pharmacy = new Pharmacy();
-        
+
+        Pharmacy pharmacy = new Pharmacy();
+
         GsonBuilder gsonBuilder = new GsonBuilder();
         Gson gson = gsonBuilder.setPrettyPrinting().create();
         int selectOption;
 
         ArrayList<Client> clients = new ArrayList<>();
 
-        Client client = new Client(1, "Pablo", "Calle piojito", 676543, new CreditCard(114455));
+        Pharmacy pharma = new Pharmacy("Sanamed", "npi", "Aleja", "clave");
+
+        //INICIO DE SESION
+        login(pharma);
+        //MENU
+        int option = 0;
+        String op = "";
+        menu(option, op);
+        //Client client = new Client(1, "Pablo", "Calle piojito", 676543, new CreditCard(114455));
         //System.out.println("The Client 1->" + client);
-        Client client2 = new Client(2, "Marta", "Calle Tejar", 226542, new CreditCard(124458));
+        // Client client2 = new Client(2, "Marta", "Calle Tejar", 226542, new CreditCard(124458));
         // System.out.println("The Client 2->" + client2);
 
-        clients.add(client);
-        clients.add(client2);
-
+        //clients.add(client);
+        //clients.add(client2);
         //System.out.println("The arraylist of clients ->" + clients);
-        Client clientsArray[] = new Client[5];
-        clientsArray[0] = client;
-        clientsArray[1] = client2;
+        //Client clientsArray[] = new Client[5];
+        //clientsArray[0] = client;
+        //clientsArray[1] = client2;
         //System.out.println("The clientArray-> " + clientsArray[0] + ", " + clientsArray[1]);
-        Scanner keyboardinput = new Scanner(System.in);
+    }
 
-        do {
-            System.out.println("\t\t\tSanamed Account System");
-            System.out.println("1.- Insert Json");
-            System.out.println("2.- Read Json");
-            System.out.println("3._ Exit\n");
-            System.out.println("Select an option : ");
-            selectOption = keyboardinput.nextInt();
-            
-            switch (selectOption){
-                case 1:
-                    System.out.println("Text Files by Myckel Chamorro");
-                    System.out.println("Insert Id-->");
-                    id = keyboardinput.nextInt();
-                    System.out.println("Insert name-->");
-                    name = keyboardinput.next();
-                    System.out.println("Insert adress-->");
-                    adress = keyboardinput.next();
-                    System.out.println("Insert Phone-->");
-                    phoneNumber = keyboardinput.nextInt();
-                    System.out.println("Insert Credit Card-->");
-                    card = keyboardinput.nextLong();
-                    CreditCard creditCard = new CreditCard(card);
+    public static void login(Pharmacy pharma) {
 
-                    Client client3 = new Client(id, name, adress, phoneNumber, creditCard);
-
-                    document = new File("clients.json");
-                    JSONObject jsonClient = new JSONObject();
-                    jsonClient.put("id",client3.getId());
-                    jsonClient.put("name",client3.getName());
-                    jsonClient.put("adress",client3.getAdress());
-                    jsonClient.put("phoneNumber",client3.getPhoneNumber());
-                    jsonClient.put("creditCard",creditCard);
-                    
-                    JSONObject clientData = new JSONObject(); 
-                    clientData.put("client",jsonClient);                    
-      
-                    if (!document.exists()) {
-                        try {
-
-                            document.createNewFile();
-                            write = new FileWriter(document, true);
-                            line = new PrintWriter(write);
-
-                           write.write(clientData.toString());
-
-                            line.close();
-                            write.close();
-
-                        } catch (IOException ex) {
-                            Logger.getLogger(SanamedAplication.class.getName()).log(Level.SEVERE, null, ex);
-                        }
-
-                    } else {
-
-                        try {
-                            write = new FileWriter(document, true);
-                            line = new PrintWriter(write);
-                            write.write(clientData.toString());
-                            line.close();
-                            write.close();
-                        } catch (IOException ex) {
-                            Logger.getLogger(SanamedAplication.class.getName()).log(Level.SEVERE, null, ex);
-                        }
-
-                    }
-                    break;
-                case 2:
-
-                  JSONParser parser = new JSONParser();
-                 
-                    try{ 
-                        FileReader reader = new FileReader("clients.json");
-                        Object obj = parser.parse(reader);   
-                        JSONObject jsonObjs = (JSONObject)obj;
-                        System.out.print("JSON"+ jsonObjs); 
-                        
-                    }catch(FileNotFoundException e) { }
-                    catch(IOException e){ } 
-                    catch(ParseException e){ }
-                    break;
-           
-                case 3:
-                    selectOption=5;
-            
-                  break;      
-             
-            }
-        }while (selectOption ==3 || selectOption == 1 || selectOption == 2); 
-        
-        Pharmacy pharma = new Pharmacy("Sanamed", "npi", "Aleja", "clave");
-        
         //INICIO DE SESION
         String userLog = null;
         Scanner scan = new Scanner(System.in);
@@ -166,27 +74,138 @@ public class SanamedAplication {
         //userLog = JOptionPane.showInputDialog("Ingrese su usuario: ");
         userLog = JOptionPane.showInputDialog(null, "Ingrese su usuario", "Ingreso de Usuario", JOptionPane.QUESTION_MESSAGE);
         pharma.logginCashier(userLog);
-        
-        //MENU
-        int opcion=0;
-        String op="";
-        do{
-        op=JOptionPane.showInputDialog("SELECCIONE UNA OPCION. \n"
-                + "1. Ingreso de ventas\n"
-                + "2. Busqueda de productos\n"
-                + "3. Imprimir\n"
-                + "4. Salir");
-        opcion = Integer.parseInt(op);
-        switch(opcion){
-            case 1: JOptionPane.showMessageDialog(null, "Selecciono ingreso de ventas");break;
-            case 2: JOptionPane.showMessageDialog(null, "Selecciono busqueda de productos");break;
-            case 3: JOptionPane.showMessageDialog(null, "Selecciono impresion");break;
-            case 4: JOptionPane.showMessageDialog(null, "Gracias por usar el programa ;D");break;
-            default: JOptionPane.showMessageDialog(null, "Eliga una de las opciones", "Error", JOptionPane.WARNING_MESSAGE);
-        }
-        }while(opcion!=4);
-        }        
+
     }
+
+    public static void menu(int option, String op) {
+        do {
+            op = JOptionPane.showInputDialog("SELECCIONE UNA OPCION. \n"
+                    + "1. Ingreso de ventas\n"
+                    + "2. Busqueda de productos\n"
+                    + "3. Imprimir\n"
+                    + "4. Salir");
+            option = Integer.parseInt(op);
+            switch (option) {
+
+                case 1:
+                    int selectOption;
+                    int id;
+                    String name;
+                    String adress;
+                    long card;
+                    int phoneNumber;
+                    File document;
+                    FileWriter write;
+                    PrintWriter line;
+                    JOptionPane.showMessageDialog(null, "Selecciono ingreso de ventas");
+                    Scanner keyboardinput = new Scanner(System.in);
+
+                    do {
+                        System.out.println("\t\t\tSanamed Account System");
+                        System.out.println("1.- Insert Json");
+                        System.out.println("2.- Read Json");
+                        System.out.println("3._ Exit\n");
+                        System.out.println("Select an option : ");
+                        selectOption = keyboardinput.nextInt();
+
+                        switch (selectOption) {
+                            case 1:
+                                System.out.println("Text Files by Myckel Chamorro");
+                                System.out.println("Insert Id-->");
+                                id = keyboardinput.nextInt();
+                                System.out.println("Insert name-->");
+                                name = keyboardinput.next();
+                                System.out.println("Insert adress-->");
+                                adress = keyboardinput.next();
+                                System.out.println("Insert Phone-->");
+                                phoneNumber = keyboardinput.nextInt();
+                                System.out.println("Insert Credit Card-->");
+                                card = keyboardinput.nextLong();
+                                CreditCard creditCard = new CreditCard(card);
+
+                                Client client3 = new Client(id, name, adress, phoneNumber, creditCard);
+
+                                document = new File("clients.json");
+                                JSONObject jsonClient = new JSONObject();
+                                jsonClient.put("id", client3.getId());
+                                jsonClient.put("name", client3.getName());
+                                jsonClient.put("adress", client3.getAdress());
+                                jsonClient.put("phoneNumber", client3.getPhoneNumber());
+                                jsonClient.put("creditCard", creditCard);
+
+                                JSONObject clientData = new JSONObject();
+                                clientData.put("client", jsonClient);
+
+                                if (!document.exists()) {
+                                    try {
+
+                                        document.createNewFile();
+                                        write = new FileWriter(document, true);
+                                        line = new PrintWriter(write);
+
+                                        write.write(clientData.toString());
+
+                                        line.close();
+                                        write.close();
+
+                                    } catch (IOException ex) {
+                                        Logger.getLogger(SanamedAplication.class.getName()).log(Level.SEVERE, null, ex);
+                                    }
+
+                                } else {
+
+                                    try {
+                                        write = new FileWriter(document, true);
+                                        line = new PrintWriter(write);
+                                        write.write(clientData.toString());
+                                        line.close();
+                                        write.close();
+                                    } catch (IOException ex) {
+                                        Logger.getLogger(SanamedAplication.class.getName()).log(Level.SEVERE, null, ex);
+                                    }
+
+                                }
+                                break;
+                            case 2:
+
+                                JSONParser parser = new JSONParser();
+
+                                try {
+                                    FileReader reader = new FileReader("clients.json");
+                                    Object obj = parser.parse(reader);
+                                    JSONObject jsonObjs = (JSONObject) obj;
+                                    System.out.print("JSON" + jsonObjs);
+
+                                } catch (FileNotFoundException e) {
+                                } catch (IOException e) {
+                                } catch (ParseException e) {
+                                }
+                                break;
+
+                            case 3:
+                                selectOption = 5;
+
+                                break;
+
+                        }
+                    } while (selectOption == 3 || selectOption == 1 || selectOption == 2);
+
+                    break;
+                case 2:
+                    JOptionPane.showMessageDialog(null, "Selecciono busqueda de productos");
+                    break;
+                case 3:
+                    JOptionPane.showMessageDialog(null, "Selecciono impresion");
+                    break;
+                case 4:
+                    JOptionPane.showMessageDialog(null, "Gracias por usar el programa ;D");
+                    break;
+                default:
+                    JOptionPane.showMessageDialog(null, "Eliga una de las opciones", "Error", JOptionPane.WARNING_MESSAGE);
+            }
+        } while (option != 4);
+    }
+}
 
 /*function validarCedula(cedula: string) {
   if (cedula.length === 10) {
@@ -240,4 +259,3 @@ public class SanamedAplication {
   }
 
 }*/
-
