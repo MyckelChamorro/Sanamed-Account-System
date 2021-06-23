@@ -9,6 +9,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import ec.edu.espe.SanamedAccountSystem.model.Client;
 import ec.edu.espe.SanamedAccountSystem.model.CreditCard;
+import ec.edu.espe.SanamedAccountSystem.model.Pharmacy;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -19,6 +20,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import org.json.JSONObject;
 import org.json.simple.JSONArray;
 import org.json.simple.parser.JSONParser;
@@ -42,6 +44,7 @@ public class SanamedAplication {
         File document;
         FileWriter write;
         PrintWriter line;
+        Pharmacy  pharmacy = new Pharmacy();
         
         GsonBuilder gsonBuilder = new GsonBuilder();
         Gson gson = gsonBuilder.setPrettyPrinting().create();
@@ -138,14 +141,7 @@ public class SanamedAplication {
                         FileReader reader = new FileReader("clients.json");
                         Object obj = parser.parse(reader);   
                         JSONObject jsonObjs = (JSONObject)obj;
-                        System.out.print("JSON"+ jsonObjs);
-                        
-                        
-                        
-                        
-                        
-                        
-                  
+                        System.out.print("JSON"+ jsonObjs); 
                         
                     }catch(FileNotFoundException e) { }
                     catch(IOException e){ } 
@@ -159,11 +155,37 @@ public class SanamedAplication {
              
             }
         }while (selectOption ==3 || selectOption == 1 || selectOption == 2); 
-               
-           
-            
-            
+        
+        Pharmacy pharma = new Pharmacy("Sanamed", "npi", "Aleja", "clave");
+        
+        //INICIO DE SESION
+        String userLog = null;
+        Scanner scan = new Scanner(System.in);
+//        System.out.println("Ingrese su usuario: ");
+//        userLog= scan.nextLine();
+        //userLog = JOptionPane.showInputDialog("Ingrese su usuario: ");
+        userLog = JOptionPane.showInputDialog(null, "Ingrese su usuario", "Ingreso de Usuario", JOptionPane.QUESTION_MESSAGE);
+        pharma.logginCashier(userLog);
+        
+        //MENU
+        int opcion=0;
+        String op="";
+        do{
+        op=JOptionPane.showInputDialog("SELECCIONE UNA OPCION. \n"
+                + "1. Ingreso de ventas\n"
+                + "2. Busqueda de productos\n"
+                + "3. Imprimir\n"
+                + "4. Salir");
+        opcion = Integer.parseInt(op);
+        switch(opcion){
+            case 1: JOptionPane.showMessageDialog(null, "Selecciono ingreso de ventas");break;
+            case 2: JOptionPane.showMessageDialog(null, "Selecciono busqueda de productos");break;
+            case 3: JOptionPane.showMessageDialog(null, "Selecciono impresion");break;
+            case 4: JOptionPane.showMessageDialog(null, "Gracias por usar el programa ;D");break;
+            default: JOptionPane.showMessageDialog(null, "Eliga una de las opciones", "Error", JOptionPane.WARNING_MESSAGE);
         }
+        }while(opcion!=4);
+        }        
     }
 
 /*function validarCedula(cedula: string) {

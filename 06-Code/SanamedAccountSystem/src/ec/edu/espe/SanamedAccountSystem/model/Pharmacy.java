@@ -5,6 +5,9 @@
  */
 package ec.edu.espe.SanamedAccountSystem.model;
 
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Esteban Chablay EMCL. Java ESPE-DCCO
@@ -13,13 +16,33 @@ public class Pharmacy {
     
     private String name;
     private String branchOffice;
+    private String userOfCashier;
+    private String password;
 
     public Pharmacy() {
     }
 
-    public Pharmacy(String name, String branchOffice) {
+    public Pharmacy(String name, String branchOffice, String userOfCashier, String password) {
         this.name = name;
         this.branchOffice = branchOffice;
+        this.userOfCashier = userOfCashier;
+        this.password = password;
+    }
+
+    public String getUserOfCashier() {
+        return userOfCashier;
+    }
+
+    public void setUserOfCashier(String userOfCashier) {
+        this.userOfCashier = userOfCashier;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
     
     /**
@@ -50,6 +73,35 @@ public class Pharmacy {
         this.branchOffice = branchOffice;
     }
     
-    
+    //Ingreso de usuario
+    public void logginCashier(String userlog){
+        //String userlog = null;
+        String userPassword;
+        Scanner scan = new Scanner(System.in);
+//        System.out.println("Ingrese un nombre: ");
+//        userlog = scan.nextLine();
+        if (userlog.equalsIgnoreCase(this.userOfCashier))
+        {
+//            System.out.println("Ingrese una contraseña: ");
+//            userPassword = scan.nextLine();
+            userPassword = JOptionPane.showInputDialog("Ingrese la contraseña: ");
+            while(userPassword.equalsIgnoreCase(this.password)==false){
+//                System.out.println("Contraseña incorrecta.");
+//                System.out.println("Ingrese una contraseña: ");
+//                userPassword = scan.nextLine();
+                JOptionPane.showMessageDialog(null, "Contraseña incorrecta.", "ERROR", JOptionPane.WARNING_MESSAGE);
+                userPassword = JOptionPane.showInputDialog("Ingrese la contraseña: ");
+                //System.out.println("- contra -> " +userPassword);
+            }
+            System.out.println("Paso el ingreso del usuario :D");
+            System.out.println("Usuario: " +this.userOfCashier);
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(null, "EL usuario no existe", "ERROR", JOptionPane.WARNING_MESSAGE);
+            System.exit(0);
+//            System.out.println("El usuario no existe.");
+        }
+    }
     
 }
