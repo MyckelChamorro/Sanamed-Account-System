@@ -28,6 +28,7 @@ public class Bill {
     }
     
     
+    
 
     public Client getClient() {
         return client;
