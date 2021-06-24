@@ -75,32 +75,24 @@ public class Pharmacy {
     
     //Ingreso de usuario
     public void logginCashier(String userlog){
-        //String userlog = null;
         String userPassword;
         Scanner scan = new Scanner(System.in);
-//        System.out.println("Ingrese un nombre: ");
-//        userlog = scan.nextLine();
         if (userlog.equalsIgnoreCase(this.userOfCashier))
         {
-//            System.out.println("Ingrese una contraseña: ");
-//            userPassword = scan.nextLine();
-            userPassword = JOptionPane.showInputDialog("Ingrese la contraseña: ");
+            System.out.println("Ingrese una contraseña: ");
+            userPassword = scan.nextLine();
             while(userPassword.equalsIgnoreCase(this.password)==false){
-//                System.out.println("Contraseña incorrecta.");
-//                System.out.println("Ingrese una contraseña: ");
-//                userPassword = scan.nextLine();
-                JOptionPane.showMessageDialog(null, "Contraseña incorrecta.", "ERROR", JOptionPane.WARNING_MESSAGE);
-                userPassword = JOptionPane.showInputDialog("Ingrese la contraseña: ");
-                //System.out.println("- contra -> " +userPassword);
+                System.out.println("Contraseña incorrecta.");
+                System.out.println("Ingrese una contraseña: ");
+                userPassword = scan.nextLine();
             }
             System.out.println("Paso el ingreso del usuario :D");
             System.out.println("Usuario: " +this.userOfCashier);
         }
         else
         {
-            JOptionPane.showMessageDialog(null, "EL usuario no existe", "ERROR", JOptionPane.WARNING_MESSAGE);
+            System.out.println("El usuario no existe.");
             System.exit(0);
-//            System.out.println("El usuario no existe.");
         }
     }
     
