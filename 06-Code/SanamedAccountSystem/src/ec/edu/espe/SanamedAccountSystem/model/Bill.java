@@ -6,7 +6,15 @@
 package ec.edu.espe.SanamedAccountSystem.model;
 
 import java.util.Date;
+import java.io.FileWriter;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 /**
  *
  * @author Esteban Chablay EMCL. Java ESPE-DCCO
@@ -16,6 +24,7 @@ public class Bill {
     private Pharmacy pharmacy;
     private int numberOfbill;
     private Date date;
+    
 
     public Bill() {
     }
