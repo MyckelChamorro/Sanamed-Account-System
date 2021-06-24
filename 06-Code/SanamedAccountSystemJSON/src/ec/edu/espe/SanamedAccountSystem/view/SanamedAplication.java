@@ -87,7 +87,7 @@ public class SanamedAplication {
                     int stock;
                     float price;
 
-                    File documentP;
+                    File documentP; //File in mains
                     FileWriter fileP;
                     PrintWriter lineP;
                     Scanner keyboardinput2 = new Scanner(System.in);
@@ -123,6 +123,7 @@ public class SanamedAplication {
                                         price = keyboardinput2.nextFloat();
 
                                         Medicins medicin = new Medicins(typeOfMed, stock, price);
+                                        // Fail to ingress a new product
 
                                         JSONObject jsonMed = new JSONObject();
                                         jsonMed.put("typeOfMedicin",medicin.getTypeOfMedicine());
@@ -165,6 +166,7 @@ public class SanamedAplication {
                                         jsonCos.put("price", cosmetic.getPrice());
                                         
                                         productData.put("cosmetic",jsonCos);
+                                        //Falid to ingress new cosmetic in JasonFile
                                         
                                         JSONArray listCos = new JSONArray();
                                         
@@ -259,6 +261,8 @@ public class SanamedAplication {
                     document = new File("clients.json");
                     JSONObject clientData = new JSONObject();
 
+                    //Failed to ingress new client in JasonFile
+                    
                     do {
                         System.out.println("\t\t\tSanamed Account System");
                         System.out.println("1.- Insert Json");
