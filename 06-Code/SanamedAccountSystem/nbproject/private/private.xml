@@ -3,8 +3,22 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/home/sony/Descargas/SanamedAccountSystem/src/ec/edu/espe/SanamedAccountSystem/view/SanamedAplication.java</file>
             <file>file:/home/sony/Descargas/SanamedAccountSystem/src/ec/edu/espe/SanamedAccountSystem/model/Bill.java</file>
+=======
+<<<<<<< HEAD
+            <file>file:/C:/Users/Karlita/Desktop/Funtions3682/POO3682/Sanamed-Account-System/06-Code/SanamedAccountSystem/src/ec/edu/espe/SanamedAccountSystem/model/Product.java</file>
+=======
+<<<<<<< HEAD
+            <file>file:/home/sony/Escritorio/ESPE/POO/Sanamed-Account-System/06-Code/SanamedAccountSystem/src/ec/edu/espe/SanamedAccountSystem/model/Client.java</file>
+            <file>file:/home/sony/Escritorio/ESPE/POO/Sanamed-Account-System/06-Code/SanamedAccountSystem/src/ec/edu/espe/SanamedAccountSystem/model/Bill.java</file>
+=======
+            <file>file:/C:/Users/Esteban/Documents/MATERIAS%20S3/POO/ProyectoSanamed/Sanamed-Account-System/06-Code/SanamedAccountSystem/src/ec/edu/espe/SanamedAccountSystem/view/SanamedAplication.java</file>
+            <file>file:/C:/Users/Esteban/Documents/MATERIAS%20S3/POO/ProyectoSanamed/Sanamed-Account-System/06-Code/SanamedAccountSystem/src/ec/edu/espe/SanamedAccountSystem/model/ShoppingList.java</file>
+>>>>>>> 57f441bcb97051776871619afe65e102210026dc
+>>>>>>> 6510759ae4d0104bfa988f5a5241cabd57c519fd
+>>>>>>> b72ca0fed46b6bb774207fef8191557229df54e9
         </group>
     </open-files>
 </project-private>
