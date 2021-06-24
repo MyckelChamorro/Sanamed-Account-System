@@ -13,7 +13,6 @@ import java.util.Iterator;
  * @author Esteban
  */
 public class ShoppingList {
-    
     private ArrayList<Product> products = new ArrayList<Product>();
     private float totalValue;
 
@@ -37,38 +36,25 @@ public class ShoppingList {
         products.add(e);
     }
     
+    public void TotalValue(){
+        
+    } 
 
-    /**
-     * @return the products
-     */
     public ArrayList<Product> getProducts() {
         return products;
     }
 
-    /**
-     * @param products the products to set
-     */
     public void setProducts(ArrayList<Product> products) {
         this.products = products;
     }
 
-    /**
-     * @return the totalValue
-     */
     public float getTotalValue() {
         return totalValue;
     }
 
-    /**
-     * @param totalValue the totalValue to set
-     */
     public void setTotalValue(float totalValue) {
         this.totalValue = totalValue;
     }
-    
-    public void TotalValue(){
-        
-    } 
     
     public ArrayList removeProduct(Product product){
         return null;

@@ -7,103 +7,77 @@ package ec.edu.espe.SanamedAccountSystem.model;
 
 /**
  *
- * @author prueba 1 
+ * @author Esteban
  */
-  public class Product {
-    
+public class Product {
    private Medicins medicine;
    private Cosmetic cosmetic;
    private Others other;
    private int quantity;
    private float individualValue;
+   private String type;
 
-    public Product() {
+   //Constructores 
+   public Product() {
     }
-    
-    
-    public Product(Medicins medicine, Cosmetic cosmetic, Others other, int quantity, float individualValue) {
-        this.medicine = medicine;
-        this.cosmetic = cosmetic;
-        this.other = other;
+
+    public Product(String type, int quantity, float individualValue) {
+        this.type = type;
         this.quantity = quantity;
         this.individualValue = individualValue;
     }
+    
+    public void addMedicine(Medicins medicina){
+        this.quantity = 1;
+        this.individualValue = medicina.getPrice();
+        this.type = medicina.getTypeOfMedicine();
+    }
 
-    /**
-     * @return the medicine
-     */
+    //Getters & Setters
     public Medicins getMedicine() {
         return medicine;
     }
 
-    /**
-     * @param medicine the medicine to set
-     */
     public void setMedicine(Medicins medicine) {
         this.medicine = medicine;
     }
 
-    /**
-     * @return the cosmetic
-     */
     public Cosmetic getCosmetic() {
         return cosmetic;
     }
 
-    /**
-     * @param cosmetic the cosmetic to set
-     */
     public void setCosmetic(Cosmetic cosmetic) {
         this.cosmetic = cosmetic;
     }
 
-    /**
-     * @return the other
-     */
     public Others getOther() {
         return other;
     }
 
-    /**
-     * @param other the other to set
-     */
     public void setOther(Others other) {
         this.other = other;
     }
 
-    /**
-     * @return the quantity
-     */
     public int getQuantity() {
         return quantity;
     }
 
-    /**
-     * @param quantity the quantity to set
-     */
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
 
-    /**
-     * @return the individualValue
-     */
     public float getIndividualValue() {
         return individualValue;
     }
 
-    /**
-     * @param individualValue the individualValue to set
-     */
     public void setIndividualValue(float individualValue) {
         this.individualValue = individualValue;
     }
    
-   
-   
-   public Medicins addMedicine(Medicins medicine){
-       return new Medicins();
-   }
+   //Metodos
+//   public Medicins addMedicine(Medicins medicine){
+//       return new Medicins();
+//   }
    
    public Cosmetic addCosmetic(Cosmetic cosmetic){
        return new Cosmetic();
@@ -112,5 +86,12 @@ package ec.edu.espe.SanamedAccountSystem.model;
    public Others addOther(Others other){
        return new Others();
    }
+
+    @Override
+    public String toString() {
+        return "Product{" + "quantity=" + quantity + ", individualValue=" + individualValue + ", type=" + type + '}';
+    }
+   
+   
    
 }
