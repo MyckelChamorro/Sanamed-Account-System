@@ -10,6 +10,8 @@ import com.google.gson.GsonBuilder;
 import ec.edu.espe.SanamedAccountSystem.model.Client;
 import ec.edu.espe.SanamedAccountSystem.model.CreditCard;
 import ec.edu.espe.SanamedAccountSystem.model.Pharmacy;
+import ec.edu.espe.SanamedAccountSystem.model.Product;
+import ec.edu.espe.SanamedAccountSystem.model.ShoppingList;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -17,6 +19,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -202,10 +205,52 @@ public class SanamedAplication {
 
                     break;
                 case 2:
-                    System.out.println("Selecciono busqueda de productos.");
+                    ArrayList<Product> ShoppingList = new ArrayList<Product>();
+                ShoppingList list2 = new ShoppingList();
+                Product product1 = new Product();
+                String tipoDeProducto;
+                System.out.println("---------------------| Seleccion de productos |---------------------------");
+                System.out.println("Tipo de producto: ");
+                tipoDeProducto = scan.nextLine();
+                Iterator<Product> it = ShoppingList.iterator();
+                int contador = 0;
+                while(it.hasNext()){
+                    list2.agregarProducto(product1);
+                }
+                System.out.println("");
                     break;
                 case 3:
-                    System.out.println("Selecciono impresion.");
+                    int opcionImpresion;
+                Client cliente = new Client();
+                Pharmacy pharm = new Pharmacy();
+                ShoppingList list = new ShoppingList();
+                System.out.println("Seleccione: ");
+                System.out.println("1. Imprimir factura.");
+                System.out.println("2. Imprimir consumidor final.");
+                opcionImpresion = scan.nextInt();
+                if(opcionImpresion == 1){
+                    System.out.println("-------------------------------| FACTURA |---------------------------------");
+                    System.out.println("Datos Cliente.");
+                    System.out.println("Cliente: " +cliente.getName());
+                    System.out.println("Direccion: " +cliente.getAdress());
+                    System.out.println("ID: " +cliente.getId());
+                    System.out.println("Datos Farmacia.");
+                    System.out.println("Nombre: " +pharm.getName());
+                    System.out.println("Sucursal: " +pharm.getBranchOffice());
+                    System.out.println("Cajera: " +pharm.getUserOfCashier());
+                    System.out.println("----------------------------------------------------------------------------");
+                    list.imprimirLista();
+                    System.out.println("----------------------------------------------------------------------------");
+                    System.out.println("Total a pagar                                               " +list.getTotalValue()+ "$");
+                    
+                }else{
+                    System.out.println("---------------------------| FARMACIA SANAMED |-----------------------------");
+                    System.out.println("Sucursal: " +pharm.getBranchOffice());
+                    System.out.println("----------------------------------------------------------------------------");
+                    list.imprimirLista();
+                    System.out.println("----------------------------------------------------------------------------");
+                    System.out.println("Total a pagar                                               " +list.getTotalValue()+ "$");
+                }
                     break;
                 case 4:
                     System.out.println("Gracias por ocupar el programa.");

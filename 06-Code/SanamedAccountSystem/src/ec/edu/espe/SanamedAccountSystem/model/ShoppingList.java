@@ -6,6 +6,7 @@
 package ec.edu.espe.SanamedAccountSystem.model;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  *
@@ -21,6 +22,19 @@ public class ShoppingList {
 
     public ShoppingList(float totalValue) {
         this.totalValue = totalValue;
+    }
+    
+    public void imprimirLista(){
+        Iterator<Product> it = products.iterator();
+        int contador = 0;
+        while(it.hasNext()){
+            System.out.println(it.next());
+            contador = contador +1;
+        }
+    }
+    
+    public void agregarProducto(Product e){
+        products.add(e);
     }
     
 
