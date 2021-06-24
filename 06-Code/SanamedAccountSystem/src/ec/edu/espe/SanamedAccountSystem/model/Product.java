@@ -7,11 +7,11 @@ package ec.edu.espe.SanamedAccountSystem.model;
 
 /**
  *
- * @author prueba 1 
+ * @author Esteban
  */
-  public class Product {
+public class Product {
     
-   private Medicins medicine;
+    private Medicins medicine;
    private Cosmetic cosmetic;
    private Others other;
    private int quantity;
@@ -19,8 +19,7 @@ package ec.edu.espe.SanamedAccountSystem.model;
 
     public Product() {
     }
-    
-    
+
     public Product(Medicins medicine, Cosmetic cosmetic, Others other, int quantity, float individualValue) {
         this.medicine = medicine;
         this.cosmetic = cosmetic;
