@@ -11,32 +11,23 @@ package ec.edu.espe.Sanamed.model;
  */
 public class Client {
 
-    private int id; // cambiar a arreglo para poder validar 
-    // int id[10]
-    //refactorar otra vez 
-    private String name;
-    private String adress;
-    private int phoneNumber;
-    private int creditCard; 
-    
-    public Client(){
-        
+   private String name;
+   private String id;
+   private String Direction;
+   private String email;
+   private String brainchOffice;
+   private String phone;
+
+    public Client() {
     }
 
-    public Client(int id, String name, String adress, int phoneNumber, int creditCard) {
-        this.id = id;
+    public Client(String name, String id, String Direction, String email, String brainchOffice, String phone) {
         this.name = name;
-        this.adress = adress;
-        this.phoneNumber = phoneNumber;
-        this.creditCard = creditCard;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
         this.id = id;
+        this.Direction = Direction;
+        this.email = email;
+        this.brainchOffice = brainchOffice;
+        this.phone = phone;
     }
 
     public String getName() {
@@ -47,29 +38,52 @@ public class Client {
         this.name = name;
     }
 
-    public String getAdress() {
-        return adress;
+    public String getId() {
+        return id;
     }
 
-    public void setAdress(String adress) {
-        this.adress = adress;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public int getPhoneNumber() {
-        return phoneNumber;
+    public String getDirection() {
+        return Direction;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void setDirection(String Direction) {
+        this.Direction = Direction;
     }
 
-    public int getCreditCard() {
-        return creditCard;
+    public String getEmail() {
+        return email;
     }
 
-    public void setCreditCard(int creditCard) {
-        this.creditCard = creditCard;
+    public void setEmail(String email) {
+        this.email = email;
     }
+
+    public String getBrainchOffice() {
+        return brainchOffice;
+    }
+
+    public void setBrainchOffice(String brainchOffice) {
+        this.brainchOffice = brainchOffice;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    @Override
+    public String toString() {
+        return "Client{" + "name=" + name + ", id=" + id + ", Direction=" + Direction + ", email=" + email + ", brainchOffice=" + brainchOffice + ", phone=" + phone + '}';
+    }
+   
+   
     
     
 }

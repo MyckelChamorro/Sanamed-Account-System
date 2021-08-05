@@ -15,18 +15,18 @@ import com.mongodb.MongoClientURI;
  *
  * @author Esteban Chablay EMCL. Java ESPE-DCCO
  */
-public class ConexionP {
+public class ConexionClient {
     DB baseDatos;
     DBCollection coleccion;
     BasicDBObject documento = new BasicDBObject();
     MongoClientURI uri = new MongoClientURI("mongodb+srv://Esteban:pooEspe123@cluster0.seaw1.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
     
-    public ConexionP()
+    public ConexionClient()
     {
         try{
             MongoClient mongo = new MongoClient(uri);
             baseDatos = mongo.getDB("pharmacy");
-            coleccion = baseDatos.getCollection("products");
+            coleccion = baseDatos.getCollection("customers");
             System.out.println("Conexion a base de datos exitoso.");
         }
         catch(Exception e)

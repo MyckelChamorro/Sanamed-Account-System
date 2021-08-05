@@ -13,7 +13,7 @@ import com.mongodb.BasicDBObject;
  */
 public class ProductDAO {
      public void insertProduct(Product p){
-        ConexionP con = new ConexionP();
+        ConexionProduct con = new ConexionProduct();
         BasicDBObject documento = new BasicDBObject();
         documento.put("type","'" +p.getType()+ "'");
         documento.put("name","'" +p.getName()+ "'");
