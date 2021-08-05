@@ -46,7 +46,7 @@ public class FrmBill extends javax.swing.JFrame {
         jCheckBox1 = new javax.swing.JCheckBox();
         jLabel8 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        txtCantProducts = new javax.swing.JTextArea();
+        txtFieldDatos = new javax.swing.JTextArea();
         jLabel9 = new javax.swing.JLabel();
         txttotal = new javax.swing.JTextField();
         checkBill = new javax.swing.JCheckBox();
@@ -118,9 +118,9 @@ public class FrmBill extends javax.swing.JFrame {
 
         jLabel8.setText("CANTIDAD DE PRODUCTOS");
 
-        txtCantProducts.setColumns(20);
-        txtCantProducts.setRows(5);
-        jScrollPane2.setViewportView(txtCantProducts);
+        txtFieldDatos.setColumns(20);
+        txtFieldDatos.setRows(5);
+        jScrollPane2.setViewportView(txtFieldDatos);
 
         jLabel9.setText("TOTAL");
 
@@ -360,9 +360,9 @@ public class FrmBill extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane2;
     public javax.swing.JTextField txtBranchOffice;
-    public javax.swing.JTextArea txtCantProducts;
     public javax.swing.JTextField txtDirection;
     public javax.swing.JTextField txtEmail;
+    public javax.swing.JTextArea txtFieldDatos;
     public javax.swing.JTextField txtId;
     public javax.swing.JTextField txtName;
     public javax.swing.JTextField txtPhone;

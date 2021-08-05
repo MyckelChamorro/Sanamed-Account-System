@@ -6,6 +6,8 @@
 package ec.edu.espe.Sanamed.model;
 
 import com.mongodb.BasicDBObject;
+import com.mongodb.DBCursor;
+import ec.edu.espe.Sanamed.view.FrmBill;
 
 /**
  *
@@ -22,4 +24,18 @@ public class ProductDAO {
         documento.put("price","'" +p.getPrice()+ "'");
         con.coleccion.insert(documento);    
     }
+     
+    public void  mostrarColeccion(FrmBill vista){
+        ConexionProduct objCon = new ConexionProduct();
+        DBCursor cursor = objCon.coleccion.find();
+        
+        Object [] objeto = new Object[3];
+        
+        
+        while(cursor.hasNext()){
+            System.out.println(cursor.next());
+            vista.txtFieldDatos.setText((String) vista.txtFieldDatos.getText()+ "\n" +cursor.next().get("name"));
+        }    
+    }
+     
 }

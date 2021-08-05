@@ -6,6 +6,9 @@
 package ec.edu.espe.Sanamed.model;
 
 import com.mongodb.BasicDBObject;
+import com.mongodb.DBCursor;
+import ec.edu.espe.Sanamed.view.FrmBill;
+import ec.edu.espe.Sanamed.view.ProductFrm;
 
 /**
  *
@@ -23,4 +26,6 @@ public class ClientDAO {
         documento.put("phone","'" +c.getPhone()+ "'");
         con.coleccion.insert(documento);
     }
+    
+    
 }
