@@ -110,6 +110,11 @@ public class FrmBill extends javax.swing.JFrame {
         jLabel7.setText("SANAMED PHARMACY");
 
         jCheckBox1.setText("COSUMIDOR FINAL ");
+        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox1ActionPerformed(evt);
+            }
+        });
 
         jLabel8.setText("CANTIDAD DE PRODUCTOS");
 
@@ -120,6 +125,11 @@ public class FrmBill extends javax.swing.JFrame {
         jLabel9.setText("TOTAL");
 
         checkBill.setText("FACTURA");
+        checkBill.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                checkBillActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -314,6 +324,14 @@ public class FrmBill extends javax.swing.JFrame {
         // TODO add your handling code here:
      
     }//GEN-LAST:event_btnHomeActionPerformed
+
+    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBox1ActionPerformed
+
+    private void checkBillActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBillActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_checkBillActionPerformed
 
     /**
      * @param args the command line arguments
