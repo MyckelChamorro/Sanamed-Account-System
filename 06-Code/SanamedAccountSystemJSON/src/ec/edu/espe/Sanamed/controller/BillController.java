@@ -7,6 +7,7 @@ package ec.edu.espe.Sanamed.controller;
 
 import ec.edu.espe.Sanamed.model.Client;
 import ec.edu.espe.Sanamed.model.ClientDAO;
+import ec.edu.espe.Sanamed.model.ProductDAO;
 import ec.edu.espe.Sanamed.view.FrmBill;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -17,6 +18,7 @@ import java.awt.event.ActionListener;
  */
 public class BillController implements ActionListener {
     ClientDAO objetoDAO = new ClientDAO();
+    ProductDAO productoDAO = new ProductDAO();
     Client objetoClient = new Client();
     FrmBill vista = new FrmBill();
 
@@ -29,6 +31,8 @@ public class BillController implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource()==vista.btnSave){
             addClient();
+            productoDAO.mostrarColeccion(vista);
+            
         }
     }
     

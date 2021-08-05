@@ -19,13 +19,13 @@ public class ConexionProduct {
     DB baseDatos;
     DBCollection coleccion;
     BasicDBObject documento = new BasicDBObject();
-    MongoClientURI uri = new MongoClientURI("mongodb+srv://Esteban:pooEspe123@cluster0.seaw1.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
+    MongoClientURI uri = new MongoClientURI("mongodb+srv://Esteban:pooEspe123@cluster0.seaw1.mongodb.net/Sanamed?retryWrites=true&w=majority");
     
     public ConexionProduct()
     {
         try{
             MongoClient mongo = new MongoClient(uri);
-            baseDatos = mongo.getDB("pharmacy");
+            baseDatos = mongo.getDB("Sanamed");
             coleccion = baseDatos.getCollection("products");
             System.out.println("Conexion a base de datos exitoso.");
         }
