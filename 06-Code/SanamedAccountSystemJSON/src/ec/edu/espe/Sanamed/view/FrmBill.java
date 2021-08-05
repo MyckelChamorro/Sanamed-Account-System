@@ -54,7 +54,7 @@ public class FrmBill extends javax.swing.JFrame {
         btnSave = new javax.swing.JButton();
         btnHome = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jLabel2.setText("Dirección");
 
@@ -312,6 +312,7 @@ public class FrmBill extends javax.swing.JFrame {
 
     private void btnHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHomeActionPerformed
         // TODO add your handling code here:
+     
     }//GEN-LAST:event_btnHomeActionPerformed
 
     /**

@@ -42,7 +42,7 @@ public class ProductFrm extends javax.swing.JFrame {
         txtPrice = new javax.swing.JTextField();
         btnAdd = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Ingreso de productos"));
 
