@@ -137,6 +137,8 @@ public class LoginFrm extends javax.swing.JFrame {
 
     private void btnStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStartActionPerformed
         // TODO add your handling code here:
+       
+        
     }//GEN-LAST:event_btnStartActionPerformed
 
     /**
@@ -144,9 +146,13 @@ public class LoginFrm extends javax.swing.JFrame {
      */
     public static void main(String args[]) {
         LoginFrm v = new LoginFrm();
+        MenuSanamed m = new MenuSanamed();
+        
         LoginController c = new LoginController(v);
         v.setVisible(true);
         v.setLocationRelativeTo(v);
+        
+      
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

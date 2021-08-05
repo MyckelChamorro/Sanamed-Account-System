@@ -3,8 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ec.edu.espe.SanamedAccountSystem.model;
+package ec.edu.espe.Sanamed.model;
 
+import ec.edu.espe.Sanamed.view.LoginFrm;
+import ec.edu.espe.Sanamed.view.MenuSanamed;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -39,8 +41,7 @@ public class UserJson {
             e.printStackTrace();
         } 
     }
-    
-    public void userVerification(String userName, String userPassword){
+    public int userVerification(String userName, String userPassword){
         JSONParser jsonParser = new JSONParser();
         int verification=0;
         
@@ -70,6 +71,7 @@ public class UserJson {
         }catch(ParseException e){
             e.printStackTrace();
         }  
+        return verification;
     }
     
     public int dataComparison(JSONObject jsonObject, String userName, String userPassword){
