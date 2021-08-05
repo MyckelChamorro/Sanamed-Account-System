@@ -10,106 +10,65 @@ package ec.edu.espe.Sanamed.model;
  * @author Esteban
  */
 public class Product {
-    
-    private Medicins medicine;
-   private Cosmetic cosmetic;
-   private Others other;
-   private int quantity;
-   private float individualValue;
+    private String type;
+    private String name;
+    private String id;
+    private String Description;
+    private float price;
 
     public Product() {
     }
 
-    public Product(Medicins medicine, Cosmetic cosmetic, Others other, int quantity, float individualValue) {
-        this.medicine = medicine;
-        this.cosmetic = cosmetic;
-        this.other = other;
-        this.quantity = quantity;
-        this.individualValue = individualValue;
+    public Product(String type, String name, String id, String Description, float price) {
+        this.type = type;
+        this.name = name;
+        this.id = id;
+        this.Description = Description;
+        this.price = price;
     }
 
-    /**
-     * @return the medicine
-     */
-    public Medicins getMedicine() {
-        return medicine;
+    public String getType() {
+        return type;
     }
 
-    /**
-     * @param medicine the medicine to set
-     */
-    public void setMedicine(Medicins medicine) {
-        this.medicine = medicine;
+    public void setType(String type) {
+        this.type = type;
     }
 
-    /**
-     * @return the cosmetic
-     */
-    public Cosmetic getCosmetic() {
-        return cosmetic;
+    public String getName() {
+        return name;
     }
 
-    /**
-     * @param cosmetic the cosmetic to set
-     */
-    public void setCosmetic(Cosmetic cosmetic) {
-        this.cosmetic = cosmetic;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    /**
-     * @return the other
-     */
-    public Others getOther() {
-        return other;
+    public String getId() {
+        return id;
     }
 
-    /**
-     * @param other the other to set
-     */
-    public void setOther(Others other) {
-        this.other = other;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    /**
-     * @return the quantity
-     */
-    public int getQuantity() {
-        return quantity;
+    public String getDescription() {
+        return Description;
     }
 
-    /**
-     * @param quantity the quantity to set
-     */
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
+    public void setDescription(String Description) {
+        this.Description = Description;
     }
 
-    /**
-     * @return the individualValue
-     */
-    public float getIndividualValue() {
-        return individualValue;
+    public float getPrice() {
+        return price;
     }
 
-    /**
-     * @param individualValue the individualValue to set
-     */
-    public void setIndividualValue(float individualValue) {
-        this.individualValue = individualValue;
+    public void setPrice(float price) {
+        this.price = price;
     }
-   
-   
-   
-   public Medicins addMedicine(Medicins medicine){
-       return new Medicins();
-   }
-   
-   public Cosmetic addCosmetic(Cosmetic cosmetic){
-       return new Cosmetic();
-   }
-   
-   public Others addOther(Others other){
-       return new Others();
-   }
-   
+
+    @Override
+    public String toString() {
+        return "Product{" + "type=" + type + ", name=" + name + ", id=" + id + ", Description=" + Description + ", price=" + price + '}';
+    }
 }

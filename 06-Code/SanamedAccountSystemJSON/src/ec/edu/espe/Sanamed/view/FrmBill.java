@@ -67,9 +67,43 @@ public class FrmBill extends javax.swing.JFrame {
 
         jLabel6.setText("Telefono");
 
+        txtName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNameActionPerformed(evt);
+            }
+        });
+
+        txtAdress.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtAdressActionPerformed(evt);
+            }
+        });
+
+        txtBrandOffice.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtBrandOfficeActionPerformed(evt);
+            }
+        });
+
         txtId.setToolTipText("Ingrese solo los 10 numeros de Cedula");
+        txtId.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtIdActionPerformed(evt);
+            }
+        });
+
+        txtEmail.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtEmailActionPerformed(evt);
+            }
+        });
 
         txtTelephone.setToolTipText("Ingrese solo los 10 numeros de Celular ");
+        txtTelephone.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtTelephoneActionPerformed(evt);
+            }
+        });
 
         jLabel7.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 36)); // NOI18N
         jLabel7.setText("SANAMED PHARMACY");
@@ -241,6 +275,30 @@ public class FrmBill extends javax.swing.JFrame {
 
 // TODO add your handling code here:
     }//GEN-LAST:event_buttonSaveActionPerformed
+
+    private void txtNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNameActionPerformed
+
+    private void txtIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtIdActionPerformed
+
+    private void txtAdressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAdressActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtAdressActionPerformed
+
+    private void txtEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEmailActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtEmailActionPerformed
+
+    private void txtBrandOfficeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBrandOfficeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtBrandOfficeActionPerformed
+
+    private void txtTelephoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTelephoneActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtTelephoneActionPerformed
 
     /**
      * @param args the command line arguments
