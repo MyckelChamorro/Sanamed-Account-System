@@ -20,7 +20,9 @@ public class ConexionClient {
     DBCollection coleccion;
     BasicDBObject documento = new BasicDBObject();
     MongoClientURI uri = new MongoClientURI("mongodb+srv://Esteban:pooEspe123@cluster0.seaw1.mongodb.net/Sanamed?retryWrites=true&w=majority");
-    
+
+//Problems in Modular Reasoning because the conexion should be a method
+
     public ConexionClient()
     {
         try{

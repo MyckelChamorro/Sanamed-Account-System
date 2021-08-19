@@ -15,9 +15,11 @@ public class ShoppingList {
     
     private ArrayList<Product> products = new ArrayList<Product>();
     private float totalValue;
-
+    
     public ShoppingList() {
     }
+    
+//Problems in High Cohesion because are some events that are empty   
 
     public ShoppingList(float totalValue) {
         this.totalValue = totalValue;
@@ -64,4 +66,6 @@ public class ShoppingList {
     public void ArrayList(Product product){
         
     }
+//Problems in High Cohesion because are some events that are empty     
+    
 }

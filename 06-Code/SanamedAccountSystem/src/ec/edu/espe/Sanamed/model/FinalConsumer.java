@@ -17,6 +17,8 @@ public class FinalConsumer {
     public FinalConsumer() {
     }
 
+//Problems in High Cohesion because are some events that are empty    
+    
     public FinalConsumer(float totalValue, ShoppingList shoppingList) {
         this.totalValue = totalValue;
         this.shoppingList = shoppingList;
@@ -42,6 +44,8 @@ public class FinalConsumer {
     public ShoppingList getShoppingList() {
         return shoppingList;
     }
+    
+//Problems in Low Coupling and High Cohesion because the return of the method is created without bases and is not doing anything      
 
     /**
      * @param shoppingList the shoppingList to set
@@ -54,4 +58,7 @@ public class FinalConsumer {
     public void printFinalConsumer(){
         
     }
+   
+//Problems in High Cohesion because are some events that are empty
+    
 }

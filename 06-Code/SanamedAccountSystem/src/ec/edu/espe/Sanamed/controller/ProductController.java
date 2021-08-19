@@ -25,7 +25,9 @@ public class ProductController implements ActionListener{
         this.vista=v;
         this.vista.btnAdd.addActionListener(this);
     }
-
+    
+    //High Cohesion because this constructor has a leaking "this" 
+    
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource()==vista.btnAdd){

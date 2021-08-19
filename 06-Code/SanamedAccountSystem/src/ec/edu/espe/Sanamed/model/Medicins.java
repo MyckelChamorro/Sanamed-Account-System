@@ -17,7 +17,9 @@ public class Medicins {
 
     public Medicins() {
     }
-
+    
+//Problems in High Cohesion because are some events that are empty
+    
     public Medicins(String typeOfMedicine, int stock, float price) {
         this.typeOfMedicine = typeOfMedicine;
         this.stock = stock;
@@ -69,4 +71,6 @@ public class Medicins {
     public void CalculateStock(){
         
     }
+    
+    //Problems in High Cohesion because are some events that are empty
 }

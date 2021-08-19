@@ -20,6 +20,7 @@ public class Client {
 
     public Client() {
     }
+    //Problems in High Cohesion and Modular Reasoning because are some events that are empty
 
     public Client(String name, String id, String Direction, String email, String brainchOffice, String phone) {
         this.name = name;
@@ -83,7 +84,7 @@ public class Client {
         return "Client{" + "name=" + name + ", id=" + id + ", Direction=" + Direction + ", email=" + email + ", brainchOffice=" + brainchOffice + ", phone=" + phone + '}';
     }
    
-   
+   //Problems in High Cohesion because this code has an Unnecessary toString; 
     
     
 }

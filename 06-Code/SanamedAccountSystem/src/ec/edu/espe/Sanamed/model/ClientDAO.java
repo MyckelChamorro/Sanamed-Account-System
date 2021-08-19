@@ -26,6 +26,6 @@ public class ClientDAO {
         documento.put("phone","'" +c.getPhone()+ "'");
         con.coleccion.insert(documento);
     }
-    
+   
     
 }

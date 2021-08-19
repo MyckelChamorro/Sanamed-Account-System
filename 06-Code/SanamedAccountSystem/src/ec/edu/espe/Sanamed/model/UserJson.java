@@ -164,4 +164,7 @@ public class UserJson {
         String password = (String) user.get("Password");
         System.out.println("Contraseña: " +password);
     }
+     
+//This class shouldn't be here     
+     
 }

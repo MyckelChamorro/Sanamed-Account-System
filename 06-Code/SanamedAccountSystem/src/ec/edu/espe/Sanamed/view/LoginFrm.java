@@ -161,6 +161,8 @@ public class LoginFrm extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtPasswordActionPerformed
 
+    //Problems in High Cohesion because are some events that are empty
+    
     /**
      * @param args the command line arguments
      */

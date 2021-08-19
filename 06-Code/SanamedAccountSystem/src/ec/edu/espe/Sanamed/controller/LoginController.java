@@ -27,6 +27,8 @@ public class LoginController implements ActionListener {
         this.vista.btnStart.addActionListener(this);
     
     }
+    
+    //High Cohesion because this constructor has a leaking "this" 
 
     @Override
     public void actionPerformed(ActionEvent e) {

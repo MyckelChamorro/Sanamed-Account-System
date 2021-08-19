@@ -18,6 +18,9 @@ public class Product {
 
     public Product() {
     }
+    
+  
+//Problems in High Cohesion because are some events that are empty    
 
     public Product(String type, String name, String id, String Description, float price) {
         this.type = type;
@@ -71,4 +74,7 @@ public class Product {
     public String toString() {
         return "Product{" + "type=" + type + ", name=" + name + ", id=" + id + ", Description=" + Description + ", price=" + price + '}';
     }
+    
+//Problems in High Cohesion because this code has an Unnecessary toString;   
+    
 }

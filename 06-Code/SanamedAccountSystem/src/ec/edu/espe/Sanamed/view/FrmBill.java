@@ -314,6 +314,8 @@ public class FrmBill extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnHomeActionPerformed
 
+    //Problems in High Cohesion because are some events that are empty
+    
     /**
      * @param args the command line arguments
      */

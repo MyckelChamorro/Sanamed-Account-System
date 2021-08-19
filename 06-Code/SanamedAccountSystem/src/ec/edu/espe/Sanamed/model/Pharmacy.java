@@ -21,7 +21,8 @@ public class Pharmacy {
 
     public Pharmacy() {
     }
-
+    
+ //Problems in High Cohesion because are some events that are empty   
     public Pharmacy(String name, String branchOffice, String userOfCashier, String password) {
         this.name = name;
         this.branchOffice = branchOffice;
@@ -95,5 +96,7 @@ public class Pharmacy {
             System.exit(0);
         }
     }
+    
+//Problems in Low Coupling because this method should be in another packages    
     
 }

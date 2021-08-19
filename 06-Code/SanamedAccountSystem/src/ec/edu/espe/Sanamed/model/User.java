@@ -20,6 +20,8 @@ public class User {
 
     public User() {
     }
+    
+//Problems in High Cohesion because are some events that are empty   
 
     public String getNameUser() {
         return nameUser;

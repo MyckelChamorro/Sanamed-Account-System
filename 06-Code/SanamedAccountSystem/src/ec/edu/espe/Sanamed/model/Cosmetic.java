@@ -17,6 +17,8 @@ public class Cosmetic {
 
     public Cosmetic() {
     }
+    
+//Problems in High Cohesion because are some events that are empty    
 
     public Cosmetic(String typeOfMedicine, int stock, float price) {
         this.typeOfMedicine = typeOfMedicine;
@@ -70,4 +72,7 @@ public class Cosmetic {
     public void calculateStock(){
         
     }
+    
+//Problems in High Cohesion because are some events that are empty
+    
 }

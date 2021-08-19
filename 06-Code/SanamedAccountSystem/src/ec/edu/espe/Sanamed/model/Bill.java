@@ -20,6 +20,8 @@ public class Bill {
     public Bill() {
     }
 
+    //Problems in High Cohesion and Modular Reasoning because are some events that are empty
+    
     public Bill(Client client, Pharmacy pharmacy, int numberOfbill, Date date) {
         this.client = client;
         this.pharmacy = pharmacy;
@@ -64,4 +66,7 @@ public class Bill {
     public void printBil(ShoppingList list){
         
     }
+    
+    //Problems in High Cohesion and Modular Reasoning because are some events that are empty
+
 }

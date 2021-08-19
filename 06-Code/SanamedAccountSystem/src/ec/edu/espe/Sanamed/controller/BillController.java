@@ -27,6 +27,8 @@ public class BillController implements ActionListener {
         this.vista.btnSave.addActionListener(this);
     } 
 
+    //High Cohesion because this constructor has a leaking "this" 
+    
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource()==vista.btnSave){

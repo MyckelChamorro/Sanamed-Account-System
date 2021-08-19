@@ -17,12 +17,15 @@ public class CreditCard {
     public String toString() {
         return "CreditCard{" + "numberOfCard=" + numberOfCard + '}';
     }
-    
+
+//Problems in High Cohesion because this code has an Unnecessary toString;    
 
     public CreditCard() {
         numberOfCard=0000;
     }
 
+ //Problems in Low Coupling because the method CreditCard() is created with no bases  
+    
     public CreditCard(long numberOfCard) {
         this.numberOfCard = numberOfCard;
     }
