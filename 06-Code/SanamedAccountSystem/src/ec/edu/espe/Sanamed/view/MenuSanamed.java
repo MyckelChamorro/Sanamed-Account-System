@@ -65,6 +65,7 @@ public class MenuSanamed extends javax.swing.JFrame {
 
         jMenu3.setText("Productos ");
 
+        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_1, java.awt.event.InputEvent.ALT_MASK));
         jMenuItem1.setText("Agregar Producto");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -73,6 +74,7 @@ public class MenuSanamed extends javax.swing.JFrame {
         });
         jMenu3.add(jMenuItem1);
 
+        jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_2, java.awt.event.InputEvent.ALT_MASK));
         jMenuItem2.setText("Eliminar Producto");
         jMenu3.add(jMenuItem2);
 
@@ -103,9 +105,11 @@ public class MenuSanamed extends javax.swing.JFrame {
 
         jMenu4.setText("Factura");
 
+        jMenuItem4.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_3, java.awt.event.InputEvent.ALT_MASK));
         jMenuItem4.setText("Nueva Factura ");
         jMenu4.add(jMenuItem4);
 
+        jMenuItem5.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_4, java.awt.event.InputEvent.ALT_MASK));
         jMenuItem5.setText("Historial de Facturas");
         jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -118,9 +122,11 @@ public class MenuSanamed extends javax.swing.JFrame {
 
         jMenu5.setText("Usuarios");
 
+        jMenuItem6.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_5, java.awt.event.InputEvent.ALT_MASK));
         jMenuItem6.setText("Nuevo Usuario ");
         jMenu5.add(jMenuItem6);
 
+        jMenuItem7.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_6, java.awt.event.InputEvent.ALT_MASK));
         jMenuItem7.setText("Verificar Usuarios");
         jMenu5.add(jMenuItem7);
 

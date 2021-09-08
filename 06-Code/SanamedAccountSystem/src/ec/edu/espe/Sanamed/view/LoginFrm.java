@@ -64,16 +64,18 @@ public class LoginFrm extends javax.swing.JFrame {
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Login"));
 
-        jLabel2.setText("Nombre: ");
+        jLabel2.setText("Usuario:");
 
         jLabel3.setText("Contraseña: ");
 
+        txtName.setToolTipText("Colocar mayuslas y minusculas");
         txtName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNameActionPerformed(evt);
             }
         });
 
+        txtPassword.setToolTipText("distingue mayusculas y minusculas ");
         txtPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtPasswordActionPerformed(evt);

@@ -46,28 +46,31 @@ public class ProductFrm extends javax.swing.JFrame {
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Ingreso de productos"));
 
-        jLabel1.setText("Type: ");
+        jLabel1.setText("Tipo:");
 
-        jLabel2.setText("Name:");
+        jLabel2.setText("Nombre:");
 
         jLabel3.setText("Id:");
 
-        jLabel4.setText("Description:");
+        jLabel4.setText("Descripcion:");
 
-        jLabel5.setText("Price:");
+        jLabel5.setText("Precio:");
 
+        txtType.setToolTipText("Ingrese el tipo de producto ");
         txtType.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtTypeActionPerformed(evt);
             }
         });
 
+        txtName.setToolTipText("Nombre del producto");
         txtName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNameActionPerformed(evt);
             }
         });
 
+        txtId.setToolTipText("Codigo del producto ");
         txtId.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtIdActionPerformed(evt);
@@ -116,9 +119,9 @@ public class ProductFrm extends javax.swing.JFrame {
                             .addComponent(jLabel5))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtDescription)
+                            .addComponent(txtDescription, javax.swing.GroupLayout.DEFAULT_SIZE, 139, Short.MAX_VALUE)
                             .addComponent(txtPrice))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
                 .addComponent(btnAdd)
                 .addGap(21, 21, 21))
         );

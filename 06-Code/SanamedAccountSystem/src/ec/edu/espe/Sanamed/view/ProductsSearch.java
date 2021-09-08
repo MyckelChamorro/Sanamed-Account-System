@@ -328,6 +328,7 @@ public class ProductsSearch extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jList3.setToolTipText("Ingrese el producto que desea buscar ");
         jScrollPane4.setViewportView(jList3);
 
         jLabel10.setText("Total:");
