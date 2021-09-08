@@ -27,7 +27,7 @@ public class ConexionProduct {
     {
         try{
             MongoClient mongo = new MongoClient(uri);
-            baseDatos = mongo.getDB("Sanamed");
+            baseDatos = mongo.getDB("pharmacy");
             coleccion = baseDatos.getCollection("products");
             System.out.println("Conexion a base de datos exitoso.");
         }

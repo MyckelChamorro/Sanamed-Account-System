@@ -5,6 +5,8 @@
  */
 package ec.edu.espe.Sanamed.view;
 
+import ec.edu.espe.Sanamed.controller.ProductSearchController;
+
 /**
  *
  * @author Carlos Campoverde EMCL:java
@@ -65,10 +67,10 @@ public class ProductsSearch extends javax.swing.JFrame {
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
         jScrollPane4 = new javax.swing.JScrollPane();
-        jList3 = new javax.swing.JList<>();
+        listProduct = new javax.swing.JList<>();
         jLabel10 = new javax.swing.JLabel();
         jTextField6 = new javax.swing.JTextField();
-        jButton9 = new javax.swing.JButton();
+        btnShowProducts = new javax.swing.JButton();
         jButton10 = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
         jTextField7 = new javax.swing.JTextField();
@@ -328,8 +330,8 @@ public class ProductsSearch extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jList3.setToolTipText("Ingrese el producto que desea buscar ");
-        jScrollPane4.setViewportView(jList3);
+        listProduct.setToolTipText("Ingrese el producto que desea buscar ");
+        jScrollPane4.setViewportView(listProduct);
 
         jLabel10.setText("Total:");
 
@@ -340,10 +342,10 @@ public class ProductsSearch extends javax.swing.JFrame {
             }
         });
 
-        jButton9.setText("Cancelar compra");
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
+        btnShowProducts.setText("Mostrar Productos");
+        btnShowProducts.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
+                btnShowProductsActionPerformed(evt);
             }
         });
 
@@ -395,14 +397,13 @@ public class ProductsSearch extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addContainerGap(54, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton9)
-                        .addGap(26, 26, 26)
+                        .addComponent(btnShowProducts)
+                        .addGap(330, 330, 330)
                         .addComponent(jButton10))
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(62, Short.MAX_VALUE)
                         .addComponent(jLabel10)
                         .addGap(26, 26, 26)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -412,8 +413,7 @@ public class ProductsSearch extends javax.swing.JFrame {
                                 .addGap(259, 259, 259)
                                 .addComponent(jLabel11)
                                 .addGap(18, 18, 18)
-                                .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(14, 14, 14)))
+                                .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addGap(49, 49, 49))
         );
         layout.setVerticalGroup(
@@ -429,7 +429,7 @@ public class ProductsSearch extends javax.swing.JFrame {
                     .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton9)
+                    .addComponent(btnShowProducts)
                     .addComponent(jButton10))
                 .addGap(56, 56, 56))
         );
@@ -449,9 +449,9 @@ public class ProductsSearch extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField7ActionPerformed
 
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+    private void btnShowProductsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnShowProductsActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton9ActionPerformed
+    }//GEN-LAST:event_btnShowProductsActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         // TODO add your handling code here:
@@ -463,6 +463,10 @@ public class ProductsSearch extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
+        ProductsSearch v = new ProductsSearch();
+        ProductSearchController c = new ProductSearchController(v);
+        v.setVisible(true);
+        v.setLocationRelativeTo(v);
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -488,11 +492,11 @@ public class ProductsSearch extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new ProductsSearch().setVisible(true);
-            }
-        });
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                new ProductsSearch().setVisible(true);
+//            }
+//        });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -504,6 +508,7 @@ public class ProductsSearch extends javax.swing.JFrame {
     private javax.swing.JMenu Search;
     private javax.swing.JMenuBar SearchProduct;
     private javax.swing.JMenu TipeSearch;
+    public javax.swing.JButton btnShowProducts;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton2;
@@ -513,7 +518,6 @@ public class ProductsSearch extends javax.swing.JFrame {
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -527,7 +531,6 @@ public class ProductsSearch extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JList<String> jList1;
     private javax.swing.JList<String> jList2;
-    private javax.swing.JList<String> jList3;
     private javax.swing.JList<String> jList4;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
@@ -548,5 +551,6 @@ public class ProductsSearch extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
+    public javax.swing.JList<String> listProduct;
     // End of variables declaration//GEN-END:variables
 }
