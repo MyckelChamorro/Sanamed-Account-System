@@ -6,6 +6,7 @@
 package ec.edu.espe.Sanamed.view;
 
 import ec.edu.espe.Sanamed.controller.LoginController;
+import javax.swing.ImageIcon;
 
 
 /**
@@ -20,6 +21,7 @@ public class LoginFrm extends javax.swing.JFrame {
     public LoginFrm() {
         initComponents();
         this.setLocationRelativeTo(this);
+       
     }
 
     /**

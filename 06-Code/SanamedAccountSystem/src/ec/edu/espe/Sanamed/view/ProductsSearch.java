@@ -74,6 +74,7 @@ public class ProductsSearch extends javax.swing.JFrame {
         jButton10 = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
         jTextField7 = new javax.swing.JTextField();
+        jButton9 = new javax.swing.JButton();
         SearchProduct = new javax.swing.JMenuBar();
         Search = new javax.swing.JMenu();
         IDSearch = new javax.swing.JMenuItem();
@@ -365,6 +366,13 @@ public class ProductsSearch extends javax.swing.JFrame {
             }
         });
 
+        jButton9.setText("Volver");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
+
         Search.setText("Buscar producto:");
 
         IDSearch.setText("Buscar por codigo");
@@ -400,8 +408,9 @@ public class ProductsSearch extends javax.swing.JFrame {
                 .addContainerGap(54, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(320, 320, 320)
                         .addComponent(btnShowProducts)
-                        .addGap(330, 330, 330)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButton10))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel10)
@@ -415,6 +424,10 @@ public class ProductsSearch extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addGap(49, 49, 49))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jButton9)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -431,7 +444,9 @@ public class ProductsSearch extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnShowProducts)
                     .addComponent(jButton10))
-                .addGap(56, 56, 56))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton9)
+                .addGap(27, 27, 27))
         );
 
         pack();
@@ -457,8 +472,13 @@ public class ProductsSearch extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton10ActionPerformed
 
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        MenuSanamed open = new MenuSanamed();
+        open.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton9ActionPerformed
+
     //Problems in High Cohesion because are some events that are empty
-    
     /**
      * @param args the command line arguments
      */
@@ -518,6 +538,7 @@ public class ProductsSearch extends javax.swing.JFrame {
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
