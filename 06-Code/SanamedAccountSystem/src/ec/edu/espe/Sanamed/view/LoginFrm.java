@@ -172,7 +172,7 @@ public class LoginFrm extends javax.swing.JFrame {
      */
     public static void main(String args[]) {
         LoginFrm v = new LoginFrm();
-        MenuSanamed m = new MenuSanamed();
+        //MenuSanamed m = new MenuSanamed();
         
         LoginController c = new LoginController(v);
         v.setVisible(true);

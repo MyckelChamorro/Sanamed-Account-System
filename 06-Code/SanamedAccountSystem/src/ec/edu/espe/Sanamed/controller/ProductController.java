@@ -10,38 +10,25 @@ import ec.edu.espe.Sanamed.model.ProductDAO;
 import ec.edu.espe.Sanamed.view.ProductFrm;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author Esteban Chablay EMCL. Java ESPE-DCCO
  */
-public class ProductController implements ActionListener{
-    
+public class ProductController {
     ProductDAO objetoDAO = new ProductDAO();
     Product objetoProduct = new Product();
-    ProductFrm vista = new ProductFrm();
+    ProductFrm vista = new ProductFrm(this);
 
-    public ProductController(ProductFrm v) {
-        this.vista=v;
-        this.vista.btnAdd.addActionListener(this);
+    public ProductController() {}
+    
+    public void mostrarVista() {
+        vista.setVisible(true);
     }
     
-    //High Cohesion because this constructor has a leaking "this" 
-    
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        if(e.getSource()==vista.btnAdd){
-            addProduct();
-        }
-    }
-    
-    public void addProduct(){
-        objetoProduct.setType(vista.txtType.getText());
-        objetoProduct.setName(vista.txtName.getText());
-        objetoProduct.setId(vista.txtId.getText());
-        objetoProduct.setDescription(vista.txtDescription.getText());
-        objetoProduct.setPrice(Integer.parseInt(vista.txtPrice.getText()));     
-        objetoDAO.insertProduct(objetoProduct);
+    public void addProduct(Product product){
+        objetoDAO.insertProduct(product);
     }
     
 }

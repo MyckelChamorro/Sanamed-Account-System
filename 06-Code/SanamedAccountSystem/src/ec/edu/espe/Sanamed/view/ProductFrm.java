@@ -6,17 +6,21 @@
 package ec.edu.espe.Sanamed.view;
 
 import ec.edu.espe.Sanamed.controller.ProductController;
+import ec.edu.espe.Sanamed.model.Product;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author Esteban Chablay EMCL. Java ESPE-DCCO
  */
 public class ProductFrm extends javax.swing.JFrame {
-
+    private ProductController controller;
+    
     /**
      * Creates new form ProductFrm
      */
-    public ProductFrm() {
+    public ProductFrm(ProductController controller) {
+        this.controller = controller;
         initComponents();
     }
 
@@ -214,25 +218,54 @@ public class ProductFrm extends javax.swing.JFrame {
 
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
         // TODO add your handling code here:
+        String type = txtType.getText().trim();
+        String name = txtName.getText().trim();
+        String id = txtId.getText().trim();
+        String description = txtDescription.getText().trim();
+        String priceTxt = txtPrice.getText().trim();
+        float price = 0.f;
+        
+        if (type.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "El tipo es necesario");
+            return;
+        }
+        
+        if (name.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "El nombre es necesario");
+            return;
+        }
+        
+        if (id.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "El id es necesario");
+            return;
+        }
+        
+        if (description.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "La descripcion es necesaria");
+            return;
+        }
+        
+        if (priceTxt.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "El precio es necesario");
+            return;
+        }
+        
+        try {
+            price = Float.parseFloat(priceTxt);
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, "El precio debe ser numerico");
+            return;
+        }
+        
+        controller.addProduct(new Product(type, name, id, description, price));
+        JOptionPane.showMessageDialog(null, "producto agregado");
     }//GEN-LAST:event_btnAddActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-       MenuSanamed open = new MenuSanamed();
+        MenuSanamed open = new MenuSanamed();
         open.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
-
-    //Problems in High Cohesion because are some events that are empty
-    
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        ProductFrm v = new ProductFrm();
-          ProductController c = new ProductController(v);
-          v.setVisible(true);
-          v.setLocationRelativeTo(v);
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnAdd;
