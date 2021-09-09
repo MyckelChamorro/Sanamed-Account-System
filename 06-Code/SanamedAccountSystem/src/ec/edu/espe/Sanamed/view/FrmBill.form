@@ -287,6 +287,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="COSUMIDOR FINAL "/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox1ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel8">
           <Properties>
@@ -322,6 +325,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="FACTURA"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="checkBillActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

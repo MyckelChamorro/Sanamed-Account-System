@@ -116,6 +116,11 @@ public class FrmBill extends javax.swing.JFrame {
         jLabel7.setText("SANAMED PHARMACY");
 
         jCheckBox1.setText("COSUMIDOR FINAL ");
+        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox1ActionPerformed(evt);
+            }
+        });
 
         jLabel8.setText("CANTIDAD DE PRODUCTOS");
 
@@ -126,6 +131,11 @@ public class FrmBill extends javax.swing.JFrame {
         jLabel9.setText("TOTAL");
 
         checkBill.setText("FACTURA");
+        checkBill.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                checkBillActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -321,8 +331,32 @@ public class FrmBill extends javax.swing.JFrame {
     private void btnHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHomeActionPerformed
         MenuSanamed open = new MenuSanamed();
         open.setVisible(true);
-        this.dispose();
+        this.setVisible(false);
     }//GEN-LAST:event_btnHomeActionPerformed
+
+    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+        txtBranchOffice.setEnabled(false);
+        txtDirection.setEnabled(false);
+        txtEmail.setEnabled(false);
+        txtFieldDatos.setEnabled(false);
+        txtId.setEnabled(false);
+        txtName.setEnabled(false);
+        txtPhone.setEnabled(false);
+        checkBill.setSelected(false);
+        
+       
+    }//GEN-LAST:event_jCheckBox1ActionPerformed
+
+    private void checkBillActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBillActionPerformed
+       txtBranchOffice.setEnabled(true);
+        txtDirection.setEnabled(true);
+        txtEmail.setEnabled(true);
+        txtFieldDatos.setEnabled(true);
+        txtId.setEnabled(true);
+        txtName.setEnabled(true);
+        txtPhone.setEnabled(true);
+        jCheckBox1.setSelected(false);
+    }//GEN-LAST:event_checkBillActionPerformed
 
     //Problems in High Cohesion because are some events that are empty
     
