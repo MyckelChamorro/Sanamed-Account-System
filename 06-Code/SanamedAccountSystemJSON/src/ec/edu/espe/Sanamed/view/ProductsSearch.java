@@ -30,24 +30,21 @@ public class ProductsSearch extends javax.swing.JFrame {
         BuscarCodigo = new javax.swing.JFrame();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        CodeOfProduct = new javax.swing.JTextField();
+        BackCode = new javax.swing.JButton();
+        AddCode = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        AmountCode = new javax.swing.JTextField();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
-        jMenuBar2 = new javax.swing.JMenuBar();
-        jMenu2 = new javax.swing.JMenu();
-        jMenu3 = new javax.swing.JMenu();
         ListaMed = new javax.swing.JFrame();
         jLabel3 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
+        ListOfMedicine = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList<>();
         jLabel4 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        AmountMed = new javax.swing.JTextField();
+        BackMed = new javax.swing.JButton();
+        AddMed = new javax.swing.JButton();
         ListaCosmeticos = new javax.swing.JFrame();
         jLabel6 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -58,12 +55,12 @@ public class ProductsSearch extends javax.swing.JFrame {
         jButton6 = new javax.swing.JButton();
         ListaOtros = new javax.swing.JFrame();
         jLabel8 = new javax.swing.JLabel();
-        jScrollPane5 = new javax.swing.JScrollPane();
+        ListOfOthers = new javax.swing.JScrollPane();
         jList4 = new javax.swing.JList<>();
         jLabel9 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
+        AmountOthers = new javax.swing.JTextField();
+        BackOthers = new javax.swing.JButton();
+        AddOthers = new javax.swing.JButton();
         jScrollPane4 = new javax.swing.JScrollPane();
         jList3 = new javax.swing.JList<>();
         jLabel10 = new javax.swing.JLabel();
@@ -85,11 +82,11 @@ public class ProductsSearch extends javax.swing.JFrame {
 
         jLabel2.setText("Ingrese el codigo del producto:");
 
-        jTextField1.setText("                ");
+        CodeOfProduct.setText("                ");
 
-        jButton1.setText("Volver");
+        BackCode.setText("Volver");
 
-        jButton2.setText("Agregar");
+        AddCode.setText("Agregar");
 
         jLabel5.setText("Cantidad:");
 
@@ -110,18 +107,18 @@ public class ProductsSearch extends javax.swing.JFrame {
                 .addGroup(BuscarCodigoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(BuscarCodigoLayout.createSequentialGroup()
                         .addGroup(BuscarCodigoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton1)
+                            .addComponent(BackCode)
                             .addGroup(BuscarCodigoLayout.createSequentialGroup()
                                 .addComponent(jLabel2)
                                 .addGap(18, 18, 18)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(CodeOfProduct, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
-                        .addComponent(jButton2)
+                        .addComponent(AddCode)
                         .addGap(26, 26, 26))
                     .addGroup(BuscarCodigoLayout.createSequentialGroup()
                         .addComponent(jLabel5)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(AmountCode, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BuscarCodigoLayout.createSequentialGroup()
                 .addContainerGap()
@@ -136,25 +133,19 @@ public class ProductsSearch extends javax.swing.JFrame {
                 .addGap(50, 50, 50)
                 .addGroup(BuscarCodigoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(CodeOfProduct, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(BuscarCodigoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(AmountCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(35, 35, 35)
                 .addGroup(BuscarCodigoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(BackCode)
+                    .addComponent(AddCode))
                 .addGap(21, 21, 21))
         );
-
-        jMenu2.setText("File");
-        jMenuBar2.add(jMenu2);
-
-        jMenu3.setText("Edit");
-        jMenuBar2.add(jMenu3);
 
         jLabel3.setText("LISTA DE MEDICAMENTOS");
 
@@ -163,15 +154,15 @@ public class ProductsSearch extends javax.swing.JFrame {
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
-        jScrollPane1.setViewportView(jList1);
+        ListOfMedicine.setViewportView(jList1);
 
         jLabel4.setText("Cantidad:");
 
-        jTextField2.setText("                 ");
+        AmountMed.setText("                 ");
 
-        jButton3.setText("Volver");
+        BackMed.setText("Volver");
 
-        jButton4.setText("Agregar");
+        AddMed.setText("Agregar");
 
         javax.swing.GroupLayout ListaMedLayout = new javax.swing.GroupLayout(ListaMed.getContentPane());
         ListaMed.getContentPane().setLayout(ListaMedLayout);
@@ -184,18 +175,18 @@ public class ProductsSearch extends javax.swing.JFrame {
                         .addComponent(jLabel3))
                     .addGroup(ListaMedLayout.createSequentialGroup()
                         .addGap(52, 52, 52)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(ListOfMedicine, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(ListaMedLayout.createSequentialGroup()
                         .addGap(37, 37, 37)
                         .addComponent(jLabel4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(AmountMed, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(55, Short.MAX_VALUE))
             .addGroup(ListaMedLayout.createSequentialGroup()
                 .addGap(160, 160, 160)
-                .addComponent(jButton3)
+                .addComponent(BackMed)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton4)
+                .addComponent(AddMed)
                 .addGap(37, 37, 37))
         );
         ListaMedLayout.setVerticalGroup(
@@ -204,15 +195,15 @@ public class ProductsSearch extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel3)
                 .addGap(26, 26, 26)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ListOfMedicine, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(23, 23, 23)
                 .addGroup(ListaMedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(AmountMed, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
                 .addGroup(ListaMedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3)
-                    .addComponent(jButton4))
+                    .addComponent(BackMed)
+                    .addComponent(AddMed))
                 .addGap(27, 27, 27))
         );
 
@@ -281,13 +272,13 @@ public class ProductsSearch extends javax.swing.JFrame {
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
-        jScrollPane5.setViewportView(jList4);
+        ListOfOthers.setViewportView(jList4);
 
         jLabel9.setText("Cantidad:");
 
-        jButton7.setText("Volver");
+        BackOthers.setText("Volver");
 
-        jButton8.setText("Agregar");
+        AddOthers.setText("Agregar");
 
         javax.swing.GroupLayout ListaOtrosLayout = new javax.swing.GroupLayout(ListaOtros.getContentPane());
         ListaOtros.getContentPane().setLayout(ListaOtrosLayout);
@@ -295,11 +286,11 @@ public class ProductsSearch extends javax.swing.JFrame {
             ListaOtrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ListaOtrosLayout.createSequentialGroup()
                 .addGroup(ListaOtrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton7)
+                    .addComponent(BackOthers)
                     .addGroup(ListaOtrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(ListaOtrosLayout.createSequentialGroup()
                             .addGap(124, 124, 124)
-                            .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(ListOfOthers, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(ListaOtrosLayout.createSequentialGroup()
                             .addGap(158, 158, 158)
                             .addComponent(jLabel8))
@@ -307,9 +298,9 @@ public class ProductsSearch extends javax.swing.JFrame {
                             .addGap(34, 34, 34)
                             .addComponent(jLabel9)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(AmountOthers, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(18, 18, 18)
-                .addComponent(jButton8)
+                .addComponent(AddOthers)
                 .addContainerGap(34, Short.MAX_VALUE))
         );
         ListaOtrosLayout.setVerticalGroup(
@@ -318,15 +309,15 @@ public class ProductsSearch extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel8)
                 .addGap(28, 28, 28)
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ListOfOthers, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(ListaOtrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(AmountOthers, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(ListaOtrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton7)
-                    .addComponent(jButton8))
+                    .addComponent(BackOthers)
+                    .addComponent(AddOthers))
                 .addContainerGap(38, Short.MAX_VALUE))
         );
 
@@ -477,23 +468,29 @@ public class ProductsSearch extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton AddCode;
+    private javax.swing.JButton AddMed;
+    private javax.swing.JButton AddOthers;
+    private javax.swing.JTextField AmountCode;
+    private javax.swing.JTextField AmountMed;
+    private javax.swing.JTextField AmountOthers;
+    private javax.swing.JButton BackCode;
+    private javax.swing.JButton BackMed;
+    private javax.swing.JButton BackOthers;
     private javax.swing.JFrame BuscarCodigo;
+    private javax.swing.JTextField CodeOfProduct;
     private javax.swing.JMenuItem IDSearch;
+    private javax.swing.JScrollPane ListOfMedicine;
+    private javax.swing.JScrollPane ListOfOthers;
     private javax.swing.JFrame ListaCosmeticos;
     private javax.swing.JFrame ListaMed;
     private javax.swing.JFrame ListaOtros;
     private javax.swing.JMenu Search;
     private javax.swing.JMenuBar SearchProduct;
     private javax.swing.JMenu TipeSearch;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
@@ -511,23 +508,14 @@ public class ProductsSearch extends javax.swing.JFrame {
     private javax.swing.JList<String> jList2;
     private javax.swing.JList<String> jList3;
     private javax.swing.JList<String> jList4;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
     // End of variables declaration//GEN-END:variables

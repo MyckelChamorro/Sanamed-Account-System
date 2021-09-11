@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group name="otros">
+            <file>file:/C:/Users/white/workspace/NetBeansProjects/SanaMed/src/ec/edu/espe/sanamed/core/DatabaseManager.java</file>
+            <file>file:/C:/Users/white/workspace/NetBeansProjects/SanaMed/src/ec/edu/espe/sanamed/core/Application.java</file>
+            <file>file:/C:/Users/white/workspace/NetBeansProjects/SanaMed/src/ec/edu/espe/sanamed/view/UsersListView.java</file>
+            <file>file:/C:/Users/white/workspace/NetBeansProjects/SanaMed/src/ec/edu/espe/sanamed/model/InvoiceItem.java</file>
+            <file>file:/C:/Users/white/workspace/NetBeansProjects/SanaMed/src/ec/edu/espe/sanamed/view/MainWindow.java</file>
+            <file>file:/C:/Users/white/workspace/NetBeansProjects/SanaMed/src/ec/edu/espe/sanamed/view/CreateInvoiceView.java</file>
+            <file>file:/C:/Users/white/workspace/NetBeansProjects/SanaMed/src/ec/edu/espe/sanamed/controller/AuthController.java</file>
+            <file>file:/C:/Users/white/workspace/NetBeansProjects/SanaMed/src/ec/edu/espe/sanamed/controller/InvoiceController.java</file>
+            <file>file:/C:/Users/white/workspace/NetBeansProjects/SanaMed/src/ec/edu/espe/sanamed/model/Invoice.java</file>
+            <file>file:/C:/Users/white/workspace/NetBeansProjects/SanaMed/src/ec/edu/espe/sanamed/service/InvoiceService.java</file>
+        </group>
+    </open-files>
+</project-private>
