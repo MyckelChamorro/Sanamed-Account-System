@@ -44,9 +44,17 @@ public class InvoiceService extends Service {
             items.add(document);
         }
         
+        Document customerDocument = new Document()
+            .append("_id", new ObjectId())
+            .append("name", invoice.getCustomer().getName())
+            .append("address", invoice.getCustomer().getAddress())
+            .append("email", invoice.getCustomer().getEmail())
+            .append("branchOffice", invoice.getCustomer().getBrainchOffice())
+            .append("phone", invoice.getCustomer().getPhone());
+        
         Document document = new Document()
             .append("_id", new ObjectId())
-            .append("customer", invoice.getCustomer())
+            .append("customer", customerDocument)
             .append("items", items);
         
         collection.insertOne(document);
